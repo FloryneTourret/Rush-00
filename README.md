@@ -13,11 +13,14 @@ Fichiers dans lesquels on va faire les requetes SQL dans des fonctions. Qu'on ap
 
 ## Dossier views *_view.php*, base et admin 
 Fichiers "front", on va faire tout l'affichage dedans.
+
 Dans le dossier base on trouve le header et footer (y compris ceux de l'admin) pour nous éviter de les réécrire 15 fois.
+
 Dans le dossier admin on trouve tous les fichiers fronts des pages admin.
 
 ## Dossier configs
 Fichier de connection a la db -> a modifier en fonction de docker.
+
 Fichiers d'installation de la db a faire avant de commencer la correction.
 
 ## Dossier assets
@@ -25,9 +28,13 @@ Lien de tous les fichiers nécessaire : css, js, img
 
 ### Dossier css
 - master.css -> style des classes générales.
+
 - grille.css -> grille qui permet de gérer le responsive : col, offset, bloc..
+
 - style.css -> style particulier au site.
 
 > Pour afficher les catégories, articles etc, on utilisera des formulaires en GET.
+
 > Pour les formulaires de connexion, inscription etc on utilisera des formulaires en POST.
+
 > Le panier sera stocké dans la session en json
