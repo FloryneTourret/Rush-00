@@ -38,3 +38,6 @@ Lien de tous les fichiers nécessaire : css, js, img
 > Pour les formulaires de connexion, inscription etc on utilisera des formulaires en POST.
 
 > Le panier sera stocké dans la session en json
+
+
+> Identifiants admin : ```admin@ftminishop.fr``` ```123```
