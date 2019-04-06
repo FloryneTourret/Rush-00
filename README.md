@@ -41,3 +41,5 @@ Lien de tous les fichiers nécessaire : css, js, img
 
 
 > Identifiants admin : ```admin@ftminishop.fr``` ```123```
+
+> Pour installer la db 127.0.0.1/config/install.php
