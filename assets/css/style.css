@@ -50,7 +50,7 @@
 }
 
 .articles-content {
-    background-color: #FDE8E9;
+    background-color: #FCFAFA;
     min-height: 96vh;
 }
 
@@ -63,7 +63,6 @@
     padding: 5px;
     background-color: #596475;
     min-height: 17vh;
-    width: 30vw;
     position: relative;
 }
 
