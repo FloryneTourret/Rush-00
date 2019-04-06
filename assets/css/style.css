@@ -48,6 +48,7 @@
 
 .articles tr td{
     padding: 10px;
+    word-break: break-all;
 }
 
 .articles tr .td1{
@@ -166,6 +167,11 @@
 }
 
 .title-page-categorie
+{
+    margin-bottom: 5vh;
+}
+
+.title-page-index
 {
     margin-bottom: 5vh;
 }
