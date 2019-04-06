@@ -6,6 +6,7 @@ if ($_SESSION['role'] != 'admin')
 
 include('../configs/database.php');
 include('../models/admin/ajout_model.php');
+include('../models/admin/categories_model.php');
 
 include('../views/base/header_admin.php');
 $categories = get_categories($mysqli);

@@ -17,6 +17,7 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    min-height: 2vh;
 }
 .topnav a:hover {
     background-color: #4E699C;
@@ -25,6 +26,22 @@
 .topnav .icon {
     display: none;
 }
+
+.categories{
+    border-collapse: collapse;
+}
+.categories tr{
+    border-bottom: .5px solid gray;
+}
+.categories tr td{
+    padding: 10px;
+}
+.categories tr td a.update{
+    color: #4E699C;
+}.categories tr td a.delete{
+    color: #9c534e;
+}
+
 
 
 @media screen and (max-width: 600px) {

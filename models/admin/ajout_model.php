@@ -15,10 +15,4 @@ function ajout_article_categorie($mysqli, $id_article, $categories)
     }
 }
 
-function get_categories($mysqli)
-{
-    $result = mysqli_query($mysqli, "SELECT * FROM `categories`");
-    return (mysqli_fetch_all($result));
-}
-
 ?>
