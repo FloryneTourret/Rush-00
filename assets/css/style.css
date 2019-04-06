@@ -107,7 +107,7 @@
     bottom: 10px;
 }
 
-.article a {
+.article button {
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -116,9 +116,23 @@
     color: white;
     background-color: #1F2232;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.article a:hover {
+.article button:hover {
     background-color: #A4B8C4;
     transition: 0.5s;
+}
+
+.title-page-categorie
+{
+    margin-bottom: 5vh;
+}
+
+.categorie-lst {
+    text-decoration: none;
+    margin: 10px;
+    background-color: #9c534e;
+    padding: 20px;
+    color: #FCFAFA;
 }

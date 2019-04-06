@@ -13,11 +13,20 @@
                 echo '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Emoji_u1f44c.svg/480px-Emoji_u1f44c.svg.png">';
                 echo '<p class="article-description">'.$row['2'].'</p>';
                 echo '<p class="article-price">'.$row['3'].'€</p>';
-                echo '<a href="../acheter.php?id='.$row['0'].'">Acheter l\'article</a>';
+                echo '<button onclick="buy('.$row['0'].');">Acheter l\'article</button>';
                 echo '</div>';
             }
 
         ?>
         <div class="clearfix"></div>
     </div>
+    <script type="text/javascript">
+        function buy(id)
+        {
+            const req = new XMLHttpRequest();
+            req.open('GET', 'http://z4r7p3.le-101.fr/acheter.php?id=' + id, true);
+            req.send();
+            location.reload();
+        }
+    </script>
 </div>
