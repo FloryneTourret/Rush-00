@@ -9,9 +9,9 @@ function get_categories($mysqli)
     return FALSE;
 }
 
-function get_articles($mysqli)
+function get_articles($mysqli, $id)
 {
-    $result = mysqli_query($mysqli, "SELECT * FROM `articles`");
+    $result = mysqli_query($mysqli, "SELECT `article_id`, `titre`, `description`, `prix` FROM `articles` INNER JOIN `article_categorie` ON articles.id = article_categorie.article_id INNER JOIN `categories` ON article_categorie.categorie_id = categories.id WHERE categories.id = $id");
     $articles = mysqli_fetch_all($result);
     if (isset($articles))
             return $articles;

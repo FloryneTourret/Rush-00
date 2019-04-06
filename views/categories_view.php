@@ -4,10 +4,11 @@
     </div>
     <div class="list-categories">
     <?php
-    var_dump($categories);
         foreach($categories as $row)
         {
-            echo $row['0'];
+            echo '<a href="categories.php?categorie='.$row['0'].'">';
+            echo $row['1'];
+            echo '</a>';
         }
     ?>
     </div>
@@ -20,7 +21,7 @@
                 echo '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Emoji_u1f44c.svg/480px-Emoji_u1f44c.svg.png">';
                 echo '<p class="article-description">'.$row['2'].'</p>';
                 echo '<p class="article-price">'.$row['3'].'€</p>';
-                echo '<a href="../acheter.php?id='.$row['0'].'">Acheter l\'article</a>';
+                echo '<a href="acheter.php?id='.$row['0'].'">Acheter l\'article</a>';
                 echo '</div></div>';
             }
 
