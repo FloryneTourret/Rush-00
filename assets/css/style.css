@@ -8,6 +8,7 @@
 .topnav {
     overflow: hidden;
     background-color: #343434;
+    min-height: 4vh;
 }
 .topnav a {
     float: left;
@@ -46,4 +47,62 @@
         display: block;
         text-align: left;
     }
+}
+
+.articles-content {
+    background-color: #FDE8E9;
+    min-height: 96vh;
+}
+
+.articles-list {
+    padding-top: 10vh 
+}
+
+.article {
+    margin: 10px;
+    padding: 5px;
+    background-color: #596475;
+    min-height: 17vh;
+    width: 30vw;
+    position: relative;
+}
+
+.article-title {
+    margin: 0;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.article img {
+    padding-top: 10px;
+    display: block;
+    width: 80px;
+    margin: auto;
+}
+
+.article-description {
+    padding-top: 20px;
+}
+
+.article-price {
+    position: absolute;
+    bottom: 10px;
+}
+
+.article a {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 5%;
+    color: white;
+    background-color: #1F2232;
+    text-decoration: none;
+}
+
+.article a:hover {
+    background-color: #A4B8C4;
+    transition: 0.5s;
 }
