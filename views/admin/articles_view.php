@@ -20,10 +20,10 @@
                 foreach ($articles as $article)
                 {
                     echo '<tr>
-                        <td class="col-2">'.$article[1].'<a href="#" onclick="update_article_titre('.$article[0].', \''.$article[1].'\')" class="update"><i class="fas fa-pen"></i></a></td>
-                        <td class="col-2">'.$article[2].'<a href="#" onclick="update_article_titre('.$article[0].', \''.$article[1].'\')" class="update"><i class="fas fa-pen"></i></a></td>
-                        <td class="col-2">'.$article[3].'€<a href="#" onclick="update_article_titre('.$article[0].', \''.$article[1].'\')" class="update"><i class="fas fa-pen"></i></a></td>
-                        <td class="col-2 text-right"><a href="#" onclick="delete_article('.$article[0].', \''.$article[1].'\')" class="delete"><i class="fas fa-trash"></a></i></td>
+                        <td class="td1 col-2"><p>'.$article[1].'</p><a href="#" onclick="update_article_titre('.$article[0].', \''.$article[1].'\')" class="update"><i class="fas fa-pen"></i></a></td>
+                        <td class="td2 col-2"><p>'.$article[2].'</p><a href="#" onclick="update_article_titre('.$article[0].', \''.$article[1].'\')" class="update"><i class="fas fa-pen"></i></a></td>
+                        <td class="td3 col-2">'.$article[3].'€<a href="#" onclick="update_article_titre('.$article[0].', \''.$article[1].'\')" class="update"><i class="fas fa-pen"></i></a></td>
+                        <td class="td4 col-2 text-right"><a href="#" onclick="delete_article('.$article[0].', \''.$article[1].'\')" class="delete"><i class="fas fa-trash"></a></i></td>
                     </tr>';
                 }
             ?>
