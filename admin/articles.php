@@ -23,18 +23,31 @@ include('../views/admin/articles_view.php');
 //     if(is_numeric($_GET['del']))
 //     {
 //         $id = $_GET['del'];
-//         suppression_categorie($mysqli, $id);
+//         suppression_article($mysqli, $id);
 //     }
 // }
-// if(isset($_GET['update']) && isset($_GET['content']))
-// {
-//     if(is_numeric($_GET['update']))
-//     {
-//         $id = $_GET['update'];
-//         $categorie = ucfirst(htmlspecialchars(addslashes($_GET['content'])));
-//         update_categorie($mysqli, $id, $categorie);
-//     }
-// }
+if(isset($_GET['update']))
+{
+    if(isset($_GET['titre']))
+    {
+        if(is_numeric($_GET['update']))
+        {
+            $id = $_GET['update'];
+            $titre = ucfirst(htmlspecialchars(addslashes($_GET['titre'])));
+            update_titre_article($mysqli, $id, $titre);
+        }
+    }
+    else if(isset($_GET['desc']))
+    {
+        if(is_numeric($_GET['update']))
+        {
+            $id = $_GET['update'];
+            $desc = ucfirst(htmlspecialchars(addslashes($_GET['desc'])));
+            update_desc_article($mysqli, $id, $desc);
+        }
+    }
+    
+}
 
 include('../views/base/footer_admin.php');
 ?>

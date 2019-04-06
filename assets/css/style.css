@@ -31,7 +31,6 @@
 .categories, .articles{
     border-collapse: collapse;
     table-layout: fixed;
-    white-space: nowrap;
 }
 .categories tr, .articles tr{
     border-bottom: .5px solid gray;
