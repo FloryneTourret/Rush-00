@@ -38,9 +38,37 @@
 .categories tr td, .articles tr td{
     height: 40px;
 }
+
+.articles thead tr th{
+    font-size: 1.2rem;
+    font-weight: bold !important;
+    font-style: italic;
+    text-align: initial;
+}
+
 .articles tr td{
-    max-width: calc(100vw /12 * 2);
-    overflow: hidden;
+    padding: 10px;
+}
+
+.articles tr .td1{
+    background-color: #FCFAFA;
+}
+
+.articles tr .td2{
+    background-color: #EAE8E8;
+}
+
+.articles tr .td3{
+    background-color: #DBD9D9;
+}
+
+.articles tr .td4{
+    background-color: #D1CFCF;
+    text-align: center;
+}
+
+.articles tr td p{
+    width: 90%;
 }
 .categories tr td a.update, .articles tr td a.update{
     color: #4E699C;
@@ -53,6 +81,7 @@
 .articles tr td a.update{
     position: absolute;
     right: 10px;
+    top: 10px;
 }
 
 
@@ -79,7 +108,7 @@
 }
 
 .articles-content {
-    background-color: #FDE8E9;
+    background-color: #FCFAFA;
     min-height: 96vh;
 }
 
@@ -92,7 +121,6 @@
     padding: 5px;
     background-color: #596475;
     min-height: 17vh;
-    width: 30vw;
     position: relative;
 }
 
@@ -120,7 +148,7 @@
     bottom: 10px;
 }
 
-.article a {
+.article button {
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -129,9 +157,23 @@
     color: white;
     background-color: #1F2232;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.article a:hover {
+.article button:hover {
     background-color: #A4B8C4;
     transition: 0.5s;
+}
+
+.title-page-categorie
+{
+    margin-bottom: 5vh;
+}
+
+.categorie-lst {
+    text-decoration: none;
+    margin: 10px;
+    background-color: #9c534e;
+    padding: 20px;
+    color: #FCFAFA;
 }

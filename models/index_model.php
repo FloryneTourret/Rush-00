@@ -9,4 +9,13 @@ function get_articles($mysqli)
     return FALSE;
 }
 
+function get_last_articles($mysqli)
+{
+    $result = mysqli_query($mysqli, "SELECT * FROM `articles` ORDER BY `id` DESC LIMIT 6 ");
+    $last5 = mysqli_fetch_all($result);
+    if (isset($last5))
+            return $last5;
+    return FALSE;
+}
+
 ?>
