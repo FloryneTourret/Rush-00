@@ -8,12 +8,13 @@ include('../configs/database.php');
 include('../models/admin/ajout_model.php');
 
 include('../views/base/header_admin.php');
+$categories = get_categories($mysqli);
 include('../views/admin/ajout_view.php');
 
 if(isset($_POST['titre']) && isset($_POST['description']) && isset($_POST['prix']))
 {
     $titre = ucfirst(htmlspecialchars(addslashes($_POST['titre'])));
-    $description = strtoupper(htmlspecialchars(addslashes($_POST['description'])));
+    $description = htmlspecialchars(addslashes($_POST['description']));
     $prix = strtolower(htmlspecialchars(addslashes($_POST['prix'])));
     if (is_numeric($prix))
     {
