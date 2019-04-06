@@ -21,7 +21,9 @@ if(isset($_POST['titre']) && isset($_POST['description']) && isset($_POST['prix'
     {
         $id_article = ajout_article($mysqli, $titre, $description, $prix);
         if(isset($_POST['categories']))
-            ajout_article_categorie($mysqli, $id_article, $categories);
+        {
+            ajout_article_categorie($mysqli, $id_article, $_POST['categories']);
+        }
         header('Location: index.php');
     }
     else
