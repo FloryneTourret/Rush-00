@@ -28,19 +28,32 @@
     display: none;
 }
 
-.categories{
+.categories, .articles{
     border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
 }
-.categories tr{
+.categories tr, .articles tr{
     border-bottom: .5px solid gray;
 }
-.categories tr td{
-    padding: 10px;
+.categories tr td, .articles tr td{
+    height: 40px;
 }
-.categories tr td a.update{
+.articles tr td{
+    max-width: calc(100vw /12 * 2);
+    overflow: hidden;
+}
+.categories tr td a.update, .articles tr td a.update{
     color: #4E699C;
-}.categories tr td a.delete{
+}.categories tr td a.delete, .articles tr td a.delete{
     color: #9c534e;
+}
+.articles tr td{
+    position: relative;
+}
+.articles tr td a.update{
+    position: absolute;
+    right: 10px;
 }
 
 

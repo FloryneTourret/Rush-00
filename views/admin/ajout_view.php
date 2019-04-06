@@ -9,7 +9,7 @@
 
         <input class="col-6 offset-3" type="text" name="titre" id="titre" placeholder="Nom du produit" required>
         <input class="col-6 offset-3" type="text" name="description" id="description" placeholder="Description du produit" required>
-        <input class="col-6 offset-3" type="number" name="prix" id="email" placeholder="Prix du produit" min="0" required>
+        <input class="col-6 offset-3" type="number" name="prix" id="email" placeholder="Prix du produit" min="0" step="0.01" required>
         <p class="col-6 offset-3">Séléctionnez une catégorie:</p>
         <select class="col-6 offset-3" data-placeholder="Catégories" name="categories[]" id="categorie_select" multiple>
             <?php
