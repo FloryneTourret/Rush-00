@@ -47,7 +47,7 @@
 
     <div class="delete-account col-4 offset-4">
 
-        <form action="delete_account.php" method="post">
+        <form class="form-special" action="delete_account.php" method="post">
             <h3>Supprimer mon compte (irréversible)</h3>
             <input type="password" name="pwd" id="pwd" placeholder="Entrez votre mot de passe" required><br>
             <button class="delete-input" type="submit">Supprimer mon compte</button>

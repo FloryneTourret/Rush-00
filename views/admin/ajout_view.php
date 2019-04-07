@@ -1,6 +1,6 @@
 <div class="bloc-1"></div>
 
-<h1 class="text-center">Ajout d'un article</h1>
+<h1 class="admin-white-text text-center">Ajout d'un article</h1>
 
 <div class="bloc-1"></div>
 
