@@ -5,6 +5,14 @@
     padding: 0;
 }
 
+body {
+    background-image: url('https://lamusejardin.com/wp-content/uploads/2015/10/wallpaper-2851221-flat-design-wallpapers-HD-free-wallpapers-backgrounds-images-FHD-4k-download-2014-2015-2016.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
 .topnav {
     overflow: hidden;
     background-color: #343434;
@@ -106,7 +114,7 @@
 }
 
 .articles-content {
-    background-color: #FCFAFA;
+    /* background-color: #FCFAFA; */
     min-height: 96vh;
 }
 
@@ -186,10 +194,81 @@
     text-align: center;
 }
 
-.profile-content .delete-account form input{
-    width: 20vw;
+.profile-content #profil-title{
+    margin-bottom: 5vh;
+    margin-top: 5vh;
 }
 
-.profile-content .delete-account .delete-input {
-    background-color: red;
+.profile-content #title-update{
+    margin-bottom: 10vh;
+}
+
+.profile-content form{
+    margin-bottom: 10vh;
+    position: relative;
+}
+
+.profile-content form input{
+    border: none;
+    border: 1px solid #596475;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.profile-content form input:focus::placeholder{
+    color: white;
+}
+
+.profile-content form input:focus{
+    outline: 0;
+    background-color: #3E6680;
+    color: white;
+    transition: 0.5s;
+    border-radius: 0;
+}
+
+.profile-content form button{
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    border: none;
+    color: #748CAB;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.profile-content form button:hover{
+    background-color: #748CAB;
+    color: white;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.profile-content .delete-account input {
+    width: 100%;
+}
+
+.profile-content .update-account {
+    text-align: center;
+}
+
+.profile-content .update-account input {
+    width: 100%;
+}
+
+.profile-content form p.update-message {
+    margin: 0;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.profile-content form p.update-message-success {
+    background-color: #6D9DC5;
+    padding: 10px;
+}
+
+.profile-content form p.update-message-error {
+    background-color: #FF5E5B;
+    padding: 10px;
 }
