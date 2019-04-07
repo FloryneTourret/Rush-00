@@ -5,15 +5,20 @@
     </header>
     <div id="page">
       <table id="cart">
-        <thead>
-          <tr>
-            <th class="first">Photo</th>
-            <th class="second">Qte</th>
-            <th class="third">Produit</th>
-            <th class="fourth">Total</th>
-            <th class="fifth">&nbsp;</th>
-          </tr>
-        </thead>
+          <?php if (isset($_SESSION['panier']))
+          {
+            echo '<thead>';
+            echo '<tr>';
+            echo '<th class="first">Photo</th>';
+            echo '<th class="second">Qte</th>';
+            echo '<th class="third">Produit</th>';
+            echo '<th class="fourth">Total</th>';
+            echo '<th class="fifth">&nbsp;</th>';
+            echo '</tr>';
+            echo '</thead>';
+          }
+        
+        ?>
         <tbody>
         <?php 
         if(!isset($_SESSION['panier']))

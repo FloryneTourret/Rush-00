@@ -1,4 +1,7 @@
-
+body {
+  background-image: url('https://i.pinimg.com/originals/28/f9/02/28f90226c40801a76fdff4daedbe7409.jpg');
+  background-size: cover;
+}
   img { border: 0; 
     width: 100px;
     height: 100px;
