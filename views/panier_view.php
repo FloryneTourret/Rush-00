@@ -18,7 +18,7 @@
         <?php 
         if(!isset($_SESSION['panier']))
         {
-            echo 'Oh non, votre panier est vide !<br>';
+            echo '<h3 class=text-center>Oh non, votre panier est vide !</h3><br>';
         }
         else
         {
@@ -46,7 +46,7 @@
                 $total += $row;
             }
             if($total == 0)
-                echo 'Oh non, votre panier est vide !<br>';
+                echo '<h3 class=text-center>Oh non, votre panier est vide !</h3><br>';
             else{
                 echo '
                 <tr class="extracosts">
@@ -59,18 +59,17 @@
                     <td class="light">Total:</td>
                     <td colspan="2">&nbsp;</td>
                     <td colspan="2"><span class="thick">'.$total.'€</span></td>
+                </tr>
+                <tr class="checkoutrow">
+                    <td colspan="5" class="checkout">
+                    <i class="far fa-credit-card"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <button id="submitbtn"><a href="valider.php">Je commande</a></button></td>
                 </tr>';
             }
         }
-
         ?>
-  <tr class="checkoutrow">
-    <td colspan="5" class="checkout">
-    <i class="far fa-credit-card"></i>
-    <i class="fab fa-cc-paypal"></i>
-    <i class="fab fa-cc-amex"></i>
-    <button id="submitbtn"><a href="valider.php">Je commande</a></button></td>
-  </tr>
 </tbody>
 
 <script type="text/javascript">

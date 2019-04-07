@@ -26,7 +26,7 @@ if(isset($_POST['email']) && isset($_POST['password']))
         $_SESSION['lastname'] = $user['lastname'];
         $_SESSION['role'] = $user['role'];
         if ($_SESSION['role'] == 'admin')
-            header('Location: admin/index.php');
+            header('Location: admin/commandes.php');
         else
             header('Location: index.php');
     }
