@@ -35,7 +35,8 @@
         ?>
         <div class="clearfix"></div>
     </div>
-    <script type="text/javascript">
+</div>
+<script type="text/javascript">
         function buy(id)
         {
             const req = new XMLHttpRequest();
@@ -44,4 +45,3 @@
             location.reload();
         }
     </script>
-</div>

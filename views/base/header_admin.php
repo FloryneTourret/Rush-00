@@ -10,7 +10,6 @@
     <!-- Fichiers css -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../assets/css/adminstyle.css">
-    <link rel="stylesheet" href="../assets/css/panier.css">
     <link rel="stylesheet" href="../assets/css/master.css">
     <link rel="stylesheet" href="../assets/css/grille.css">
     

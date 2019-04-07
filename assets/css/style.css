@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('https://media.giphy.com/media/7PiUBb5AHMZYk/giphy.gif');
+    background-image: url('https://i.pinimg.com/originals/6e/4e/7c/6e4e7c98bc4ffc5180054c9502e6d312.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -121,10 +121,6 @@ body {
     }
 }
 
-.articles-content {
-    min-height: 96vh;
-}
-
 .list-categories {
     padding-top: 5vh;
 }
@@ -137,7 +133,7 @@ body {
 .article {
     margin: 10px;
     padding: 5px;
-    background-color: #54a7aaa4;
+    background-color: #54a7aa;
     min-height: 17vh;
     position: relative;
     border-radius: 10px;
@@ -148,7 +144,7 @@ body {
 .article-title {
     margin: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.637);
+    background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     border-radius: 10px;
     padding-bottom: 10px;
@@ -274,10 +270,17 @@ body {
 
 .categorie-lst {
     text-decoration: none;
+    font-size: 0.9rem;
     margin: 10px;
-    background-color: #9c534e;
     padding: 20px;
-    color: #FCFAFA;
+    color: #9c534e;
+    border-bottom: 1px solid #9c534e;
+    transition-timing-function: ease-in-out;
+    transition: 0.3s;
+}
+
+.categorie-lst:hover {
+    font-size: 1.5rem;
 }
 
 .profile-content .delete-account form{

@@ -7,15 +7,29 @@
       <table id="cart">
           <?php if (isset($_SESSION['panier']))
           {
-            echo '<thead>';
-            echo '<tr>';
-            echo '<th class="first">Photo</th>';
-            echo '<th class="second">Qte</th>';
-            echo '<th class="third">Produit</th>';
-            echo '<th class="fourth">Total</th>';
-            echo '<th class="fifth">&nbsp;</th>';
-            echo '</tr>';
-            echo '</thead>';
+            $panier = json_decode($_SESSION['panier']);
+            $prix = array();
+            $thead = 0;
+            foreach($panier as $article)
+            {
+                if($article->quantite > 0)
+                {
+                    $thead = 1;
+                }
+            }
+            if($thead == 1)
+            {
+                echo '<thead>';
+                echo '<tr>';
+                echo '<th class="first">Photo</th>';
+                echo '<th class="second">Qte</th>';
+                echo '<th class="third">Produit</th>';
+                echo '<th class="fourth">Total</th>';
+                echo '<th class="fifth">&nbsp;</th>';
+                echo '</tr>';
+                echo '</thead>';
+            }
+            
           }
         
         ?>
@@ -51,7 +65,7 @@
                 $total += $row;
             }
             $total += 5;
-            if($total == 0)
+            if($total == 5)
                 echo '<h3 class=text-center>Oh non, votre panier est vide !</h3><br>';
             else{
                 echo '
