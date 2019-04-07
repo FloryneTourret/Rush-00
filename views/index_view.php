@@ -22,7 +22,7 @@
         function buy(id)
         {
             const req = new XMLHttpRequest();
-            req.open('GET', 'http://z4r7p3.le-101.fr/acheter.php?id=' + id, true);
+            req.open('GET', 'http://localhost/acheter.php?id=' + id, true);
             req.send();
             location.reload();
         }

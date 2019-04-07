@@ -122,6 +122,7 @@ body {
 }
 
 .articles-content {
+    /* background-color: #FCFAFA; */
     min-height: 96vh;
 }
 
@@ -171,6 +172,7 @@ body {
     text-align: center;
     padding-bottom: 10px;
     transition: 0.2s;
+    word-break: break-all;
 }
 
 .article img {
@@ -257,6 +259,11 @@ body {
     margin-bottom: 5vh;
 }
 
+.title-page-index
+{
+    margin-bottom: 5vh;
+}
+
 .categorie-lst {
     text-decoration: none;
     margin: 10px;
@@ -264,3 +271,128 @@ body {
     padding: 20px;
     color: #FCFAFA;
 }
+
+.profile-content .delete-account form{
+    text-align: center;
+}
+
+.profile-content #profil-title{
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+.profile-content #title-update{
+    margin-bottom: 10vh;
+}
+
+.profile-content form{
+    margin-bottom: 10vh;
+    position: relative;
+}
+
+.profile-content form input{
+    border: none;
+    border: 1px solid #596475;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.profile-content form input:focus::placeholder{
+    color: white;
+}
+
+.profile-content form input:focus{
+    outline: 0;
+    background-color: #3E6680;
+    color: white;
+    transition: 0.5s;
+    border-radius: 0;
+}
+
+.profile-content form button{
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    border: none;
+    color: #748CAB;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.profile-content form button:hover{
+    background-color: #748CAB;
+    color: white;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.profile-content .delete-account input {
+    width: 100%;
+}
+
+.profile-content .update-account {
+    text-align: center;
+}
+
+.profile-content .update-account input {
+    width: 100%;
+}
+
+.profile-content form p.update-message {
+    margin: 0;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.profile-content form p.update-message-success {
+    background-color: #6D9DC5;
+    padding: 10px;
+}
+
+.profile-content form p.update-message-error {
+    background-color: #FF5E5B;
+    padding: 10px;
+}
+.profile-content .delete-account .delete-input {
+    background-color: red;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }

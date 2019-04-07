@@ -19,10 +19,10 @@
             foreach ($articles as $article)
             {
                 echo '<tr>
-                    <td class="td1 col-2"><p>'.$article[1].'</p><a href="#" onclick="update_article_titre('.$article[0].', \''.$article[1].'\')" class="update"><i class="fas fa-pen"></i></a></td>
-                    <td class="td2 col-2"><p>'.$article[2].'</p><a href="#" onclick="update_article_desc('.$article[0].', \''.$article[1].'\', \''.$article[2].'\')" class="update"><i class="fas fa-pen"></i></a></td>
-                    <td class="td3 col-2">'.$article[3].'€<a href="#" onclick="update_article_prix('.$article[0].', \''.$article[1].'\', \''.$article[3].'\')" class="update"><i class="fas fa-pen"></i></a></td>
-                    <td class="td4 col-2 text-right"><a href="#" onclick="delete_article('.$article[0].', \''.$article[1].'\')" class="delete"><i class="fas fa-trash"></a></i></td>
+                    <td class="td1 col-2"><p>'.$article[1].'</p><a href="#" onclick="update_article_titre('.addslashes($article[0]).', \''.addslashes($article[1]).'\')" class="update"><i class="fas fa-pen"></i></a></td>
+                    <td class="td2 col-2"><p>'.$article[2].'</p><a href="#" onclick="update_article_desc('.addslashes($article[0]).', \''.addslashes($article[1]).'\', \''.addslashes($article[2]).'\')" class="update"><i class="fas fa-pen"></i></a></td>
+                    <td class="td3 col-2">'.$article[3].'€<a href="#" onclick="update_article_prix('.addslashes($article[0]).', \''.addslashes($article[1]).'\', \''.addslashes($article[3]).'\')" class="update"><i class="fas fa-pen"></i></a></td>
+                    <td class="td4 col-2 text-right"><a href="#" onclick="delete_article('.addslashes($article[0]).', \''.addslashes($article[1]).'\')" class="delete"><i class="fas fa-trash"></a></i></td>
                 </tr>';
             }
         ?>
@@ -40,15 +40,15 @@ function delete_article(id, article) {
     const req = new XMLHttpRequest();
     req.open('GET', 'http://localhost/admin/articles.php?del=' + id, true); 
     req.send();
-    location.reload();
   }
+  location.reload();
 }
 
 function update_article_titre(id, article) {
   var article = prompt("Modifier l'article \"" + article + "\"?", article);
   if (article != null) {
     const req = new XMLHttpRequest();
-    req.open('GET', 'http://localhost/admin/articles.php?update=' + id + '&titre=' + article, true); 
+    req.open('GET', 'http://localhost/admin/articles.php?update=' + id + '&titre=' + article, false); 
     req.send();
   }
   location.reload();
@@ -58,9 +58,8 @@ function update_article_desc(id, article, desc) {
   var desc = prompt("Modifier l'article \"" + article + "\"?", desc);
   if (desc != null) {
     const req = new XMLHttpRequest();
-    req.open('GET', 'http://localhost/admin/articles.php?update=' + id + '&desc=' + desc, true); 
+    req.open('GET', 'http://localhost/admin/articles.php?update=' + id + '&desc=' + desc, false); 
     req.send();
-    console.log(desc)
   }
   location.reload();
 }
@@ -69,7 +68,7 @@ function update_article_prix(id, article, prix) {
   var prix = prompt("Modifier l'article \"" + article + "\"?", prix);
   if (prix != null) {
     const req = new XMLHttpRequest();
-    req.open('GET', 'http://localhost/admin/articles.php?update=' + id + '&prix=' + prix, true); 
+    req.open('GET', 'http://localhost/admin/articles.php?update=' + id + '&prix=' + prix, false); 
     req.send();
     }
   location.reload();

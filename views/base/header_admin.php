@@ -8,7 +8,9 @@
     <title>ft_minishop</title>
 
     <!-- Fichiers css -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/panier.css">
     <link rel="stylesheet" href="../assets/css/master.css">
     <link rel="stylesheet" href="../assets/css/grille.css">
     
@@ -22,7 +24,7 @@
   <a href="../index.php">ft_minishop</a>
   <?php if(isset($_SESSION['email'])){ ?>
   <a href="../logout.php" class="float-right">Déconnexion</a>
-  <a href="index.php" class="float-right">Panel admin</a>
+  <a href="commandes.php" class="float-right">Panel admin</a>
   <a href="../profil.php" class="float-right"><?php echo $_SESSION['firstname'].' '.$_SESSION['lastname'];?></a>
   <?php }else{?>
     <a href="../register.php" class="float-right">S'inscrire</a>

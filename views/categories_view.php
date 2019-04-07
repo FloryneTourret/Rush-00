@@ -2,7 +2,7 @@
     <div class="title-page-categorie col-6 offset-3 text-center">
         <h1>catégories</h1>
     </div>
-    <div class="list-categories">
+    <div class="list-categories text-center">
     <?php
         foreach($categories as $row)
         {
