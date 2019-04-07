@@ -49,10 +49,10 @@
                 {
                     echo '<tr class="productitm">
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Emoji_u1f44c.svg/480px-Emoji_u1f44c.svg.png" class="thumb"></td>
-                        <td><input disabled="disabled" type="number" value="'.$article->quantite.'" min="0" max="99" class="qtyinput"><br>
-                        <a onclick=plus('.$article->id.')><i class="fas fa-plus"></i> </a>
+                        <td class="qte col-3"><input disabled="disabled" type="number" value="'.$article->quantite.'" min="0" max="99" class="qtyinput">
+                        <a onclick=plus('.$article->id.')><i class="fas fa-plus"></i></a>
                         <a onclick=moins('.$article->id.')> <i class="fas fa-minus"></i></a></td>
-                        <td>'.$article->titre.'</td>
+                        <td class="product-title">'.$article->titre.'</td>
                         <td>'.$article->prix.'</td>
                         <td><span class="remove"><a onclick=retirer('.$article->id.')> <i class="fas fa-trash"></i> </a></span></td>
                     </tr>';
