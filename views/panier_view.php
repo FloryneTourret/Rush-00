@@ -85,14 +85,22 @@
                 </tr>';
             }
         }
-        ?>
-    </tbody>
+    echo '</tbody>
 </table>
 </div>
-</div>
-<div class="col-10 valider">
-<button id="submitbtn"><a class="textco" href="valider.php">Je commande</a></button>
-</div>
+</div>';
+if (isset($_SESSION['panier']))
+{
+    if($total != 5)
+    {
+    echo '<div class="col-10 valider">
+    <button id="submitbtn"><a class="textco" href="valider.php">Je commande</a></button>
+    </div>';
+    }
+    
+}
+
+?>
 
 <script type="text/javascript">
     function plus(id)
