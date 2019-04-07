@@ -9,7 +9,7 @@ if (isset($_SESSION['email']))
 include('configs/database.php');
 include('models/login_model.php');
 
-include('views/base/header.php');
+include('views/base/header_connexion.php');
 include('views/login_view.php');
 
 if(isset($_POST['email']) && isset($_POST['password']))
