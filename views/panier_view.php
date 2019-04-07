@@ -1,5 +1,5 @@
 <div class="bloc-1"></div>
-<div id="w" class="col-10 offset-1">
+<div id="w" class="col-8 offset-2">
     <header id="title">
       <h1>Mon Panier</h1>
     </header>
@@ -49,7 +49,7 @@
                 {
                     echo '<tr class="productitm">
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Emoji_u1f44c.svg/480px-Emoji_u1f44c.svg.png" class="thumb"></td>
-                        <td class="qte col-3"><input disabled="disabled" type="number" value="'.$article->quantite.'" min="0" max="99" class="qtyinput">
+                        <td class="col-3"><input disabled="disabled" type="number" value="'.$article->quantite.'" min="0" max="99" class="qtyinput">
                         <a onclick=plus('.$article->id.')><i class="fas fa-plus"></i></a>
                         <a onclick=moins('.$article->id.')> <i class="fas fa-minus"></i></a></td>
                         <td class="product-title">'.$article->titre.'</td>
@@ -69,28 +69,30 @@
                 echo '<h3 class=text-center>Oh non, votre panier est vide !</h3><br>';
             else{
                 echo '
-                <tr class="extracosts">
-                    <td class="light">Frais de Livraison</td>
-                    <td colspan="2" class="light"></td>
-                    <td>5.00€</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr class="totalprice">
-                    <td class="light">Total:</td>
-                    <td colspan="2">&nbsp;</td>
-                    <td colspan="2"><span class="thick">'.$total.'€</span></td>
+                <tr class="checkoutrow">
+                    <td style="text-align:right;padding-right:25px;"colspan="5"><span class="thick">Frais de Livraison: 5.00€</span></td>
                 </tr>
                 <tr class="checkoutrow">
-                    <td colspan="5" class="checkout">
-                    <i class="far fa-credit-card"></i>
-                    <i class="fab fa-cc-paypal"></i>
-                    <i class="fab fa-cc-amex"></i>
-                    <button id="submitbtn"><a class="textco" href="valider.php">Je commande</a></button></td>
+                    <td style="text-align:right;padding-right:25px;" colspan="5"><span class="thick">Total: '.$total.'€</span></td>
+                </tr>
+                <tr class="checkoutrow">
+                    <td style="text-align:left;padding-left:25px;padding-bottom:25px;" colspan="5">
+                    <span class="thick" style="font-size:2rem;">
+                    <i class="fas fa-credit-card"></i>
+                    <i class="fab fa-paypal"></i>
+                    <i class="fab fa-bitcoin"></i></span>
+                    </td>
                 </tr>';
             }
         }
         ?>
-</tbody>
+    </tbody>
+</table>
+</div>
+</div>
+<div class="col-10 valider">
+<button id="submitbtn"><a class="textco" href="valider.php">Je commande</a></button>
+</div>
 
 <script type="text/javascript">
     function plus(id)
