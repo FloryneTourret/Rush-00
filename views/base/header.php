@@ -9,6 +9,7 @@
 
     <!-- Fichiers css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/panier.css">
     <link rel="stylesheet" href="assets/css/master.css">
     <link rel="stylesheet" href="assets/css/grille.css">
     
