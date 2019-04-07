@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+if (is_empty($_SESSION['email']))
+    header('Location: ../index.php');
+
 include('configs/database.php');
 //include('models/profil_model.php');
 
