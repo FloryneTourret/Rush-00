@@ -1,7 +1,4 @@
 <div class="articles-content">
-    <div class="title-page-categorie col-6 offset-3 text-center">
-        <h1>catégories</h1>
-    </div>
     <div class="list-categories text-center">
     <?php
         foreach($categories as $row)
@@ -11,6 +8,14 @@
             echo '</a>';
         }
     ?>
+    </div>
+    <div class="title-page-categorie col-4 offset-2">
+        <?php 
+        
+        if ($actual != FALSE)
+            echo '<h1>'.$actual[1].'</h1>';
+        
+        ?>
     </div>
     <div class="articles-list offset-2">
         <?php

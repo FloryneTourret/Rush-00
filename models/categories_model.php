@@ -18,4 +18,13 @@ function get_articles($mysqli, $id)
     return FALSE;
 }
 
+function get_actual($mysqli, $id)
+{
+    $result = mysqli_query($mysqli, "SELECT * FROM `categories` WHERE id = $id");
+    $actual = mysqli_fetch_array($result);
+    if (isset($actual))
+            return $actual;
+    return FALSE;
+}
+
 ?>
