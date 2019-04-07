@@ -17,7 +17,7 @@ if(isset($_POST['categorie']))
 {
     $categorie = ucfirst(htmlspecialchars(addslashes($_POST['categorie'])));
     ajout_categorie($mysqli, $categorie);
-    header('Location: categories.php');
+    echo("<script>location.href = 'categories.php';</script>");
 }
 if(isset($_GET['del']))
 {
