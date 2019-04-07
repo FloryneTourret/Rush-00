@@ -38,7 +38,7 @@ function delete_article(id, article) {
   var r = confirm("Voulez vous supprimer l'article' \"" + article + "\"?");
   if (r == true) {
     const req = new XMLHttpRequest();
-    req.open('GET', 'http://localhost/admin/articles.php?del=' + id, true); 
+    req.open('GET', 'http://127.0.0.1/admin/articles.php?del=' + id, true); 
     req.send();
   }
   location.reload();
@@ -48,7 +48,7 @@ function update_article_titre(id, article) {
   var article = prompt("Modifier l'article \"" + article + "\"?", article);
   if (article != null) {
     const req = new XMLHttpRequest();
-    req.open('GET', 'http://localhost/admin/articles.php?update=' + id + '&titre=' + article, false); 
+    req.open('GET', 'http://127.0.0.1/admin/articles.php?update=' + id + '&titre=' + article, false); 
     req.send();
   }
   location.reload();
@@ -58,7 +58,7 @@ function update_article_desc(id, article, desc) {
   var desc = prompt("Modifier l'article \"" + article + "\"?", desc);
   if (desc != null) {
     const req = new XMLHttpRequest();
-    req.open('GET', 'http://localhost/admin/articles.php?update=' + id + '&desc=' + desc, false); 
+    req.open('GET', 'http://127.0.0.1/admin/articles.php?update=' + id + '&desc=' + desc, false); 
     req.send();
   }
   location.reload();
@@ -68,7 +68,7 @@ function update_article_prix(id, article, prix) {
   var prix = prompt("Modifier l'article \"" + article + "\"?", prix);
   if (prix != null) {
     const req = new XMLHttpRequest();
-    req.open('GET', 'http://localhost/admin/articles.php?update=' + id + '&prix=' + prix, false); 
+    req.open('GET', 'http://127.0.0.1/admin/articles.php?update=' + id + '&prix=' + prix, false); 
     req.send();
     }
   location.reload();

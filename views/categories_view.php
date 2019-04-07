@@ -34,7 +34,7 @@
         function buy(id)
         {
             const req = new XMLHttpRequest();
-            req.open('GET', 'http://z4r7p3.le-101.fr/acheter.php?id=' + id, true);
+            req.open('GET', 'http://127.0.0.1/acheter.php?id=' + id, true);
             req.send();
             location.reload();
         }

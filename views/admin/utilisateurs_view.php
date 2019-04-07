@@ -30,7 +30,7 @@ function delete_user(id, categorie) {
   var r = confirm("Voulez vous supprimer l'utilisateur \"" + categorie + "\"?");
   if (r == true) {
     const req = new XMLHttpRequest();
-    req.open('GET', 'http://localhost/admin/utilisateurs.php?del=' + id, true); 
+    req.open('GET', 'http://127.0.0.1/admin/utilisateurs.php?del=' + id, true); 
     req.send();
     location.reload();
   }
