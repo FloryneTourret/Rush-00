@@ -30,7 +30,7 @@
                 {
                     echo '<tr class="productitm">
                         <td><img src="https://www.parfumerie-burdin.com/media/caron/pour-un-homme/pour-un-homme-de-caron-parfum-75ml-14387-200x200.jpg" class="thumb"></td>
-                        <td><input disables="disabled"type="number" value="'.$article->quantite.'" min="0" max="99" class="qtyinput"><br>
+                        <td><input disabled="disabled" type="number" value="'.$article->quantite.'" min="0" max="99" class="qtyinput"><br>
                         <a onclick=plus('.$article->id.')><i class="fas fa-plus"></i> </a>
                         <a onclick=moins('.$article->id.')> <i class="fas fa-minus"></i></a></td>
                         <td>'.$article->titre.'</td>
