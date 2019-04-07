@@ -9,7 +9,7 @@ else
     include('models/valider_model.php');
     valider_commande($mysqli);
     $_SESSION['panier'] = NULL;
-    header('Location: profil.php');
+    header('Location: commandes.php');
 }
 
 ?>

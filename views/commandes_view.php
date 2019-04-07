@@ -16,6 +16,7 @@
     <?php
     foreach($commandes as $commande)
     {
+        $prix = NULL;
         $panier = json_decode($commande[2]);
         echo '<tr>';
         echo '<td class="td1 col-2">'.$commande[5].' '.$commande[6].'</td>';

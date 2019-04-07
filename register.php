@@ -21,8 +21,6 @@ if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['emai
     }
     else
     {
-
-    	
         // Ma clé privée
         $secret = "6LeUtpwUAAAAAFSgwDpQWdxHeZ-HgWnpBb0Gm78T";
         // Paramètre renvoyé par le recaptcha
