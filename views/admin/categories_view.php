@@ -39,7 +39,7 @@ function delete_categorie(id, categorie) {
   var r = confirm("Voulez vous supprimer la catégorie \"" + categorie + "\"?");
   if (r == true) {
     const req = new XMLHttpRequest();
-    req.open('GET', 'http://localhost/admin/categories.php?del=' + id, true); 
+    req.open('GET', 'http://127.0.0.1/admin/categories.php?del=' + id, true); 
     req.send();
     location.reload();
   }
@@ -49,7 +49,7 @@ function update_categorie(id, categorie) {
   var categorie = prompt("Modifier la catégorie \"" + categorie + "\"?", categorie);
   if (categorie != null) {
     const req = new XMLHttpRequest();
-    req.open('GET', 'http://localhost/admin/categories.php?update=' + id + '&content=' + categorie, true); 
+    req.open('GET', 'http://127.0.0.1/admin/categories.php?update=' + id + '&content=' + categorie, true); 
     req.send();
     location.reload();
   }
