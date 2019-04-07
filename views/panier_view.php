@@ -3,7 +3,11 @@
 </div>
 <?php
 
-if(isset($_SESSION['panier']))
+if(!isset($_SESSION['panier']))
+{
+    echo 'Oh non, votre panier est vide !<br>';
+}
+else
 {
     $panier = json_decode($_SESSION['panier']);
     $prix = array();
@@ -27,12 +31,15 @@ if(isset($_SESSION['panier']))
     foreach ($prix as $row) {
         $total += $row;
     }
-    echo 'total : '.$total.'<br>';
+    if($total == 0)
+        echo 'Oh non, votre panier est vide !<br>';
+    else{
+        echo 'total : '.$total.'<br>';
+        echo '<a href="valider.php">Passer ma commande</a>';
+    }
 }
 
 ?>
-<p> -> modifier son panier </p>
-<p> -> passer sa commande </p>
 
 <script type="text/javascript">
     function plus(id)

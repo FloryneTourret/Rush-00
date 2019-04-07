@@ -17,10 +17,11 @@ if(isset($_POST['email']) && isset($_POST['password']))
 
     $email = strtolower(htmlspecialchars(addslashes($_POST['email'])));
     $password = htmlspecialchars(addslashes($_POST['password']));
-    $user = check_login($mysqli, $email, $password );
+    $user = check_login($mysqli, $email, $password);
     if($user != FALSE)
     {
         $_SESSION['email'] = $email;
+        $_SESSION['id'] = $user['id'];
         $_SESSION['firstname'] = $user['firstname'];
         $_SESSION['lastname'] = $user['lastname'];
         $_SESSION['role'] = $user['role'];
