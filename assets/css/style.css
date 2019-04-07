@@ -5,10 +5,20 @@
     padding: 0;
 }
 
+body {
+    background-image: url(https://media.giphy.com/media/7PiUBb5AHMZYk/giphy.gif);
+    background-size: 100%;
+
+
+}
+
 .topnav {
     overflow: hidden;
-    background-color: #343434;
+    background-color: #34343485;
     min-height: 4vh;
+    margin-right: 0px;
+    border-top: solid 5px rgb(81, 98, 196);
+    border-bottom: solid 5px rgb(81, 98, 196);
 }
 .topnav a {
     float: left;
@@ -18,11 +28,17 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 2vh;
 }
 .topnav a:hover {
-    background-color: #4E699C;
+    background-color: rgb(63, 96, 158);
     color: white;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 9px;
+    transition: 0.4s;
 }
 .topnav .icon {
     display: none;
@@ -106,28 +122,55 @@
 }
 
 .articles-content {
-    background-color: #FCFAFA;
     min-height: 96vh;
 }
 
 .articles-list {
-    padding-top: 10vh 
+    padding-top: 5vh;
 }
+
 
 .article {
     margin: 10px;
     padding: 5px;
-    background-color: #596475;
+    background-color: #54a7aaa4;
     min-height: 17vh;
     position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgb(0, 0, 0);
+    transition: 0.1s, width 0.2s;
 }
 
 .article-title {
     margin: 0;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.637);
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    transition: 0.2s;
+}
+
+.article:hover {
+    margin: 10px;
+    padding: 5px;
+    background-color: #357c86;
+    min-height: 17vh;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px rgb(35, 84, 156);
+    transition: 0.3s;
+}
+
+.article:hover .article-title{
+    margin: 0;
+    width: 100%;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fff;
     text-align: center;
     padding-bottom: 10px;
+    transition: 0.2s;
 }
 
 .article img {
@@ -135,15 +178,47 @@
     display: block;
     width: 80px;
     margin: auto;
+    margin-bottom: 0;
+    transition: 0.2s;
+}
+
+.article:hover img {
+    padding-top: 10px;
+    display: block;
+    width: 100px;
+    margin: auto;
+    transition: 0.4s, position 0s;;
+}
+
+.article:hover .article-description {
+    padding-top: 0px;
+    position: absolute;
+    color: rgb(219, 219, 219);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.4s;
+    z-index: 5;
 }
 
 .article-description {
     padding-top: 20px;
+    transition: 0.2s;
+    color: rgb(219, 219, 219);
+}
+
+.article:hover .article-price {
+    position: absolute;
+    padding-top: 20px;
+    bottom: 10px;
+    color: rgb(219, 219, 219);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.4s;
 }
 
 .article-price {
     position: absolute;
     bottom: 10px;
+    transition: 0.2s;
+    color: rgb(219, 219, 219);
 }
 
 .article button {
@@ -151,11 +226,25 @@
     bottom: 10px;
     right: 10px;
     padding: 10px;
-    border-radius: 5%;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(61, 124, 153);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.article:hover button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 10px;
     color: white;
     background-color: #1F2232;
     text-decoration: none;
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .article button:hover {
