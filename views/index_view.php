@@ -1,4 +1,4 @@
-<div class="articles-content col-12">
+<div class="articles-content">
 
     <div class="title-page-index col-6 offset-3 text-center">
         <h1>ft_minishop</h1>

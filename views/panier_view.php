@@ -13,7 +13,7 @@ else
     $prix = array();
     foreach($panier as $article)
     {
-        if($article->quantite != 0)
+        if($article->quantite > 0)
         {
             echo 'id : '.$article->id;
             echo ', titre : '.$article->titre;
