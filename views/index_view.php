@@ -32,7 +32,7 @@
         function buy(id)
         {
             const req = new XMLHttpRequest();
-            req.open('GET', 'http://localhost/acheter.php?id=' + id, true);
+            req.open('GET', 'http://127.0.0.1/acheter.php?id=' + id, true);
             req.send();
             location.reload();
         }

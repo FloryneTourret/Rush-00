@@ -77,7 +77,7 @@
     function plus(id)
     {
         const req = new XMLHttpRequest();
-        req.open('GET', 'http://localhost/acheter.php?id=' + id, true);
+        req.open('GET', 'http://127.0.0.1/acheter.php?id=' + id, true);
         req.send();
         location.reload();
     }
@@ -85,7 +85,7 @@
     function moins(id)
     {
         const req = new XMLHttpRequest();
-        req.open('GET', 'http://localhost/moins.php?id=' + id, true);
+        req.open('GET', 'http://127.0.0.1/moins.php?id=' + id, true);
         req.send();
         location.reload();
     }
@@ -93,7 +93,7 @@
     function retirer(id)
     {
         const req = new XMLHttpRequest();
-        req.open('GET', 'http://localhost/retirer.php?id=' + id, true);
+        req.open('GET', 'http://127.0.0.1/retirer.php?id=' + id, true);
         req.send();
         location.reload();
     }
