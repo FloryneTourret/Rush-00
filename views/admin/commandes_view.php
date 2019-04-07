@@ -35,6 +35,7 @@
         foreach ($prix as $row) {
             $total += $row;
         }
+        $total+=5;
         echo '<td class="td4 col-2">'.$total.'€</td>';
         echo '</tr>';
     }

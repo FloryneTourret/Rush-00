@@ -45,6 +45,7 @@
             foreach ($prix as $row) {
                 $total += $row;
             }
+            $total += 5;
             if($total == 0)
                 echo '<h3 class=text-center>Oh non, votre panier est vide !</h3><br>';
             else{
