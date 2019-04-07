@@ -6,6 +6,6 @@
     <a href="ajout.php">Ajouter un article</a><br>
     <a href="articles.php">Gérer les articles</a><br>
     <a href="categories.php">Gérer les catégories</a><br>
-    <a href="utilisateurs.php">Gérer les utilisateurs</a>
+    <a href="utilisateurs.php">Gérer les utilisateurs</a><br>
+    <a href="commandes.php">Historique des commandes</a>
 </div>
-<p> -> compte rendu des commandes </p>
