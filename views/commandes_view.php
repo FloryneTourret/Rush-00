@@ -26,7 +26,7 @@
         {
             if($article->quantite > 0)
             {
-                echo $article->quantite.' ';
+                echo $article->quantite.'x ';
                 echo $article->titre.'<br>';
                 $prix[] =  $article->quantite * $article->prix;
             }
