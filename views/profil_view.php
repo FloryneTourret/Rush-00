@@ -1,12 +1,12 @@
 <div class="profile-content">
     <div class="col-6 offset-3 text-center">
-        <h1 id="profil-title">Bonjour, <?php echo $_SESSION['firstname']?></h1>
+        <h1 class="admin-white-text" id="profil-title">Bonjour, <?php echo $_SESSION['firstname']?></h1>
     </div>
 
-    <div class="update-account col-4 offset-4">
-    <h2 id="title-update">Ici, vous pouvez modifier vos informations.</h2>
+    <div class="update-account col-6 offset-3">
+    <h2 class="admin-white-text" id="title-update">Ici, vous pouvez modifier vos informations.</h2>
         <form action="update_mail.php" method="post">
-            <h3>Modifier mon adresse mail</h3>
+            <h3 class="admin-white-text">Modifier mon adresse mail</h3>
             <?php 
             if (isset($_SESSION['mail-message']))
             {
@@ -25,7 +25,7 @@
         </form>
 
         <form action="update_password.php" method="post">
-            <h3>Modifier mon mot de passe</h3>
+            <h3 class="admin-white-text">Modifier mon mot de passe</h3>
             <?php 
             if (isset($_SESSION['message']))
             {
@@ -45,11 +45,11 @@
         </form>
     </div>
 
-    <div class="delete-account col-4 offset-4">
+    <div class="delete-account col-6 offset-3">
 
         <form class="form-special" action="delete_account.php" method="post">
-            <h3>Supprimer mon compte (irréversible)</h3>
-            <input type="password" name="pwd" id="pwd" placeholder="Entrez votre mot de passe" required><br>
+            <h3 class="admin-white-text">Supprimer mon compte (irréversible)</h3>
+            <input class="special-input" type="password" name="pwd" id="pwd" placeholder="Entrez votre mot de passe" required><br>
             <button class="delete-input" type="submit">Supprimer mon compte</button>
         </form>
 

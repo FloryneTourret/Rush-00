@@ -7,10 +7,10 @@
 <div class="offset-2">
 <table class="articles">
     <thead>
-        <th class="admin-white-text">Utilisateur</th>
-        <th class="admin-white-text">Date de la commande</th>
-        <th class="admin-white-text">Détail de la commande</th>
-        <th class="admin-white-text">Total de la commande</th>
+        <th class="col-2 admin-white-text">Utilisateur</th>
+        <th class="col-2 admin-white-text">Date de la commande</th>
+        <th class="col-2 admin-white-text">Détail de la commande</th>
+        <th class="col-2 admin-white-text">Total de la commande</th>
     </thead>
     <tbody>
     <?php

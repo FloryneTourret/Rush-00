@@ -4,7 +4,7 @@
   <a href="commandes.php">Voir mon historique de commandes</a><br>
 </div>
 
-<span style="font-size:30px;cursor:pointer;margin-left:20px;margin-top:20px;" onclick="openNav()">&#9776;</span>
+<span style="color:white;font-size:30px;cursor:pointer;margin-left:20px;margin-top:20px;" onclick="openNav()">&#9776;</span>
 
 <script>
 function openNav() {

@@ -1,0 +1,533 @@
+*{
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+button:hover {
+    font-weight: bold;
+}
+
+body {
+    background-image: url('https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Backgrounds-Flat-Design-HD-PIC-WPB004634.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #34343485;
+    min-height: 4vh;
+    margin-right: 0px;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 2vh;
+}
+.topnav a:hover {
+    background-color: rgb(63, 96, 158);
+    color: white;
+    transition: 0.4s;
+}
+.topnav .icon {
+    display: none;
+}
+
+.categories, .articles, .utilisateurs{
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.categories tr, .articles tr, .utilisateurs tr{
+    border-bottom: .5px solid gray;
+}
+.categories tr td, .articles tr td, .utilisateurs tr td{
+    height: 40px;
+}
+
+.articles thead tr th{
+    font-size: 1.2rem;
+    font-weight: bold !important;
+    font-style: italic;
+    text-align: initial;
+}
+.articles tr td{
+    padding: 10px;
+    word-break: break-all;
+}
+.articles tr .td1{
+    background-color: #FCFAFA;
+}
+
+.articles tr .td2{
+    background-color: #EAE8E8;
+}
+
+.articles tr .td3{
+    background-color: #DBD9D9;
+}
+
+.articles tr .td4{
+    background-color: #D1CFCF;
+    text-align: center;
+}
+
+.articles tr td p{
+    width: 90%;
+}
+
+a.red-bin{
+    color:#9c534e;
+}
+
+.categories tr td a.update, .articles tr td a.update{
+    color: #4E699C;
+}.categories tr td a.delete, .articles tr td a.delete, .utilisateurs tr td a.delete{
+    color: whitesmoke;
+}
+.articles tr td{
+    position: relative;
+}
+.articles tr td a.update{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none !important;
+        display: block;
+        text-align: left;
+    }
+}
+
+.articles-content {
+    min-height: 96vh;
+}
+
+.list-categories {
+    padding-top: 5vh;
+}
+
+.articles-list {
+    padding-top: 5vh;
+}
+
+
+.article {
+    margin: 10px;
+    padding: 5px;
+    background-color: #54a7aaa4;
+    min-height: 17vh;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgb(0, 0, 0);
+    transition: 0.1s, width 0.2s;
+}
+
+.article-title {
+    margin: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.637);
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    transition: 0.2s;
+}
+
+.article:hover {
+    margin: 10px;
+    padding: 5px;
+    background-color: #357c86;
+    min-height: 17vh;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px rgb(35, 84, 156);
+    transition: 0.3s;
+}
+
+.article-title {
+    word-break: break-all;
+}
+
+.article:hover .article-title{
+    margin: 0;
+    width: 100%;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 10px;
+    transition: 0.2s;
+    word-break: break-all;
+}
+
+.article img {
+    padding-top: 10px;
+    display: block;
+    width: 80px;
+    margin: auto;
+    margin-bottom: 0;
+    transition: 0.2s;
+}
+
+.article:hover img {
+    padding-top: 10px;
+    display: block;
+    width: 100px;
+    margin: auto;
+    transition: 0.4s, position 0s;;
+}
+
+.article:hover .article-description {
+    padding-top: 0px;
+    position: absolute;
+    color: rgb(219, 219, 219);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.4s;
+    z-index: 5;
+}
+
+.article-description {
+    padding-top: 20px;
+    transition: 0.2s;
+    color: rgb(219, 219, 219);
+}
+
+.article:hover .article-price {
+    position: absolute;
+    padding-top: 20px;
+    bottom: 10px;
+    color: rgb(219, 219, 219);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.4s;
+}
+
+.article-price {
+    position: absolute;
+    bottom: 10px;
+    transition: 0.2s;
+    color: rgb(219, 219, 219);
+}
+
+.article button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(61, 124, 153);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.article:hover button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: #1F2232;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.article button:hover {
+    background-color: #A4B8C4;
+    transition: 0.5s;
+}
+
+.title-page-categorie
+{
+    margin-bottom: 5vh;
+}
+
+.title-page-index
+{
+    margin-bottom: 5vh;
+}
+
+.categorie-lst {
+    text-decoration: none;
+    margin: 10px;
+    background-color: #9c534e;
+    padding: 20px;
+    color: #FCFAFA;
+}
+
+.profile-content .delete-account form{
+    text-align: center;
+}
+
+.profile-content #profil-title{
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+.profile-content #title-update{
+    margin-bottom: 10vh;
+}
+
+.profile-content form{
+    margin-bottom: 10vh;
+    position: relative;
+}
+
+.profile-content form input{
+    border: none;
+    border: 1px solid #596475;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.profile-content form input:focus::placeholder{
+    color: white;
+}
+
+.profile-content form input:focus{
+    outline: 0;
+    background-color: #3E6680;
+    color: white;
+    transition: 0.5s;
+    border-radius: 0;
+}
+
+.profile-content form button{
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    border: none;
+    color: #748CAB;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.profile-content form button:hover{
+    background-color: #748CAB;
+    color: white;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.profile-content .delete-account input {
+    width: 100%;
+}
+
+.profile-content .update-account {
+    text-align: center;
+}
+
+.profile-content .update-account input {
+    width: 100%;
+}
+
+.profile-content form p.update-message {
+    margin: 0;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.profile-content form p.update-message-success {
+    background-color: #6D9DC5;
+    padding: 10px;
+}
+
+.profile-content form p.update-message-error {
+    background-color: #FF5E5B;
+    padding: 10px;
+}
+
+.profile-content .delete-account .delete-input{
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    border: none;
+    color: #748CAB;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.profile-content .delete-account .special-input:focus{
+    background-color: #B5513B;
+}
+
+.profile-content .delete-account .delete-input:hover{
+    background-color: #A24936;
+    color: white;
+    transition: 0.5s;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.form-special{
+    margin-bottom: 0 !important;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .admin-white-text {
+      color: whitesmoke;
+  }
+
+.select-categorie-text {
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+
+ form.add-categories input{
+    border: none;
+    border: 1px solid #596475;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.profile-content form input:focus::placeholder{
+    color: white;
+}
+
+form.add-categories {
+    position: relative;
+}
+
+form.add-categories input:focus{
+    outline: 0;
+    background-color: #3E6680;
+    color: white;
+    transition: 0.5s;
+    border-radius: 0;
+}
+
+form.add-categories button{
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    border: none;
+    color: #748CAB;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+form.add-categories button:hover{
+    background-color: #748CAB;
+    color: white;
+    transition: 0.5s;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+form.add-articles input{
+    border: none;
+    border: 1px solid #596475;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+form.add-articles select{
+    border: none;
+    border: 1px solid #596475;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+form.add-articles select:focus{
+    outline: 0;
+}
+
+form.add-articles {
+    position: relative;
+}
+
+form.add-articles input:focus{
+    outline: 0;
+    background-color: #3E6680;
+    color: white;
+    transition: 0.5s;
+    border-radius: 0;
+}
+
+form.add-articles button{
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    border: none;
+    color: #748CAB;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+form.add-articles button:hover{
+    background-color: #748CAB;
+    color: white;
+    transition: 0.5s;
+    border-radius: 10px;
+    font-weight: bold;
+}

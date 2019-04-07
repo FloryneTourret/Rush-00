@@ -9,10 +9,10 @@
 <div class="offset-2">
     <table class="articles" id="liste_articles">
         <thead>
-            <th class="admin-white-text">Titre</th>
-            <th class="admin-white-text">Description</th>
-            <th class="admin-white-text">Prix</th>
-            <th class="admin-white-text">Supprimer ?</th>
+            <th class="col-2 admin-white-text">Titre</th>
+            <th class="col-2 admin-white-text">Description</th>
+            <th class="col-2 admin-white-text">Prix</th>
+            <th class="col-2 admin-white-text">Supprimer ?</th>
         </thead>
         <tbody>
         <?php 
