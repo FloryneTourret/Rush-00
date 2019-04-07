@@ -2,6 +2,16 @@
     <div class="col-12">
     
     </div>
+    <div class="list-categories text-center">
+    <?php
+        foreach($categories as $row)
+        {
+            echo '<a class="categorie-lst" href="categories.php?categorie='.$row['0'].'">';
+            echo $row['1'];
+            echo '</a>';
+        }
+    ?>
+    </div>
     <div class="articles-list offset-1">
         <?php 
             foreach($articles as $row)
