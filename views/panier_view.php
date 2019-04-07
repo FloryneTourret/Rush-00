@@ -66,7 +66,7 @@
                     <i class="far fa-credit-card"></i>
                     <i class="fab fa-cc-paypal"></i>
                     <i class="fab fa-cc-amex"></i>
-                    <button id="submitbtn"><a href="valider.php">Je commande</a></button></td>
+                    <button id="submitbtn"><a class="textco" href="valider.php">Je commande</a></button></td>
                 </tr>';
             }
         }
