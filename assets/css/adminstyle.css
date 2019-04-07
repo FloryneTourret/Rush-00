@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('https://media.giphy.com/media/7PiUBb5AHMZYk/giphy.gif');
+    background-image: url('http://www.jlstms.com/data/wallpapers/27/im57641004.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -17,8 +17,6 @@ body {
     background-color: #34343485;
     min-height: 4vh;
     margin-right: 0px;
-    border-top: solid 5px rgb(81, 98, 196);
-    border-bottom: solid 5px rgb(81, 98, 196);
 }
 .topnav a {
     float: left;
@@ -34,10 +32,6 @@ body {
 .topnav a:hover {
     background-color: rgb(63, 96, 158);
     color: white;
-    border-radius: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 9px;
     transition: 0.4s;
 }
 .topnav .icon {
@@ -85,10 +79,15 @@ body {
 .articles tr td p{
     width: 90%;
 }
+
+a.red-bin{
+    color:#9c534e;
+}
+
 .categories tr td a.update, .articles tr td a.update{
     color: #4E699C;
 }.categories tr td a.delete, .articles tr td a.delete, .utilisateurs tr td a.delete{
-    color: #9c534e;
+    color: whitesmoke;
 }
 .articles tr td{
     position: relative;
@@ -407,3 +406,49 @@ body {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  .admin-white-text {
+      color: whitesmoke;
+  }
+
+
+ form.add-categories input{
+    border: none;
+    border: 1px solid #596475;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.profile-content form input:focus::placeholder{
+    color: white;
+}
+
+form.add-categories {
+    position: relative;
+}
+
+form.add-categories input:focus{
+    outline: 0;
+    background-color: #3E6680;
+    color: white;
+    transition: 0.5s;
+    border-radius: 0;
+}
+
+form.add-categories button{
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    border: none;
+    color: #748CAB;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+form.add-categories button:hover{
+    background-color: #748CAB;
+    color: white;
+    transition: 0.5s;
+    border-radius: 10px;
+}

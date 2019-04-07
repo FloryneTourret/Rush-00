@@ -1,6 +1,6 @@
 <div class="bloc-1"></div>
 
-<h1 class="text-center">Gestion des utilisateurs</h1>
+<h1 class="admin-white-text text-center">Gestion des utilisateurs</h1>
 
 <div class="bloc-1"></div>
 
@@ -13,9 +13,9 @@
                 foreach ($utilisateurs as $utilisateur)
                 {
                     echo '<tr>
-                        <td class="col-2"><p>'.$utilisateur[1].' '.$utilisateur[2].'</p></td>
-                        <td class="col-2 text-center"><p>'.$utilisateur[3].'</p></td>
-                        <td class="col-2 text-center"><p>'.ucfirst($utilisateur[5]).'</p></td>
+                        <td class="col-2"><p class="admin-white-text">'.$utilisateur[1].' '.$utilisateur[2].'</p></td>
+                        <td class="col-2 text-center"><p class="admin-white-text">'.$utilisateur[3].'</p></td>
+                        <td class="col-2 text-center"><p class="admin-white-text">'.ucfirst($utilisateur[5]).'</p></td>
                         <td class="col-2 text-right"><a href="#" onclick="delete_user('.$utilisateur[0].', \''.$utilisateur[3].'\')" class="delete"><i class="fas fa-trash"></a></i></td>
                     </tr>';
                 }

@@ -1,16 +1,16 @@
 <div class="bloc-1"></div>
 
-<h1 class="text-center">Historique des commandes</h1>
+<h1 class="admin-white-text text-center">Historique des commandes</h1>
 
 <div class="bloc-1"></div>
 
 <div class="offset-2">
 <table class="articles">
     <thead>
-        <th>Utilisateur</th>
-        <th>Date de la commande</th>
-        <th>Détail de la commande</th>
-        <th>Total de la commande</th>
+        <th class="admin-white-text">Utilisateur</th>
+        <th class="admin-white-text">Date de la commande</th>
+        <th class="admin-white-text">Détail de la commande</th>
+        <th class="admin-white-text">Total de la commande</th>
     </thead>
     <tbody>
     <?php
@@ -25,9 +25,9 @@
         {
             if($article->quantite > 0)
             {
-                echo $article->quantite.' ';
+                echo $article->quantite.'x ';
                 echo $article->titre.'<br>';
-                $prix[] =  $article->quantite * $article->prix;
+                $prix[] = $article->quantite * $article->prix;
             }
         }
         echo '</td>';
