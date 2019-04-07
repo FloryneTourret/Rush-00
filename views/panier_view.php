@@ -48,7 +48,14 @@
             if($total == 0)
                 echo 'Oh non, votre panier est vide !<br>';
             else{
-                echo '<tr class="totalprice">
+                echo '
+                <tr class="extracosts">
+                    <td class="light">Frais de Livraison</td>
+                    <td colspan="2" class="light"></td>
+                    <td>5.00€</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="totalprice">
                     <td class="light">Total:</td>
                     <td colspan="2">&nbsp;</td>
                     <td colspan="2"><span class="thick">'.$total.'€</span></td>
