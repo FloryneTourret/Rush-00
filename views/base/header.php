@@ -7,6 +7,8 @@
 
     <title>ft_minishop</title>
 
+    <link rel="icon" href="assets/img/favicon.ico" />
+
     <!-- Fichiers css -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/master.css">

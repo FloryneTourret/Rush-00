@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>ft_minishop</title>
+    <link rel="icon" href="../assets/img/favicon.ico" />
 
     <!-- Fichiers css -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
