@@ -23,7 +23,7 @@
                 foreach ($categories as $categorie)
                 {
                     echo '<tr>
-                        <td class="col-2"><p>'.$categorie[1].'</p>
+                        <td class="col-2"><p>'.$categorie[1].'</p></td>
                         <td class="col-2 text-center"><a href="#" onclick="update_categorie('.$categorie[0].', \''.$categorie[1].'\')" class="update"><i class="fas fa-pen"></a></i></td>
                         <td class="col-2 text-right"><a href="#" onclick="delete_categorie('.$categorie[0].', \''.$categorie[1].'\')" class="delete"><i class="fas fa-trash"></a></i></td>
                     </tr>';

@@ -20,7 +20,6 @@
 
 <div class="topnav clearfix" id="myTopnav">
   <a href="index.php">ft_minishop</a>
-  <a href="categories.php">Catégories</a>
   <?php if(isset($_SESSION['email'])){ ?>
   <a href="logout.php" class="float-right">Déconnexion</a>
   <?php if($_SESSION['role'] == 'admin'){ ?>
