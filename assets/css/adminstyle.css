@@ -411,6 +411,11 @@ a.red-bin{
       color: whitesmoke;
   }
 
+.select-categorie-text {
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
 
  form.add-categories input{
     border: none;
@@ -451,4 +456,55 @@ form.add-categories button:hover{
     color: white;
     transition: 0.5s;
     border-radius: 10px;
+    font-weight: bold;
+}
+
+form.add-articles input{
+    border: none;
+    border: 1px solid #596475;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+form.add-articles select{
+    border: none;
+    border: 1px solid #596475;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+form.add-articles select:focus{
+    outline: 0;
+}
+
+form.add-articles {
+    position: relative;
+}
+
+form.add-articles input:focus{
+    outline: 0;
+    background-color: #3E6680;
+    color: white;
+    transition: 0.5s;
+    border-radius: 0;
+}
+
+form.add-articles button{
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    border: none;
+    color: #748CAB;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+form.add-articles button:hover{
+    background-color: #748CAB;
+    color: white;
+    transition: 0.5s;
+    border-radius: 10px;
+    font-weight: bold;
 }

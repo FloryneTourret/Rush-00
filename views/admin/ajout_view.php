@@ -5,18 +5,18 @@
 <div class="bloc-1"></div>
 
 <div>
-    <form action="ajout.php" method="post">
+    <form class="add-articles col-6 offset-3" action="ajout.php" method="post">
 
-        <input class="col-6 offset-3" type="text" name="titre" id="titre" placeholder="Nom du produit" required>
-        <input class="col-6 offset-3" type="text" name="description" id="description" placeholder="Description du produit" required>
-        <input class="col-6 offset-3" type="number" name="prix" id="email" placeholder="Prix du produit" min="0" step="0.01" required>
-        <p class="col-6 offset-3">Séléctionnez une catégorie:</p>
-        <select class="col-6 offset-3" data-placeholder="Catégories" name="categories[]" id="categorie_select" multiple>
+        <input type="text" name="titre" id="titre" placeholder="Nom du produit" required>
+        <input type="text" name="description" id="description" placeholder="Description du produit" required>
+        <input type="number" name="prix" id="email" placeholder="Prix du produit" min="0" step="0.01" required>
+        <p class="select-categorie-text admin-white-text">Séléctionnez une catégorie:</p>
+        <select data-placeholder="Catégories" name="categories[]" id="categorie_select" multiple>
             <?php
             foreach($categories as $row)
                 echo '<option value="'.$row[0].'">'.$row[1].'</option>';
             ?>
-        </select>
-        <button class="col-6 offset-3" type="submit" value="OK">Ajouter le produit</button>
+        </select><br>
+        <button type="submit" value="OK">Ajouter le produit</button>
     </form>
 </div>
