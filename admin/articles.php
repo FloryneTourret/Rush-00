@@ -9,6 +9,7 @@ include('../configs/database.php');
 include('../models/admin/articles_model.php');
 
 include('../views/base/header_admin.php');
+include('../views/base/sidebar.php');
 $articles = get_articles($mysqli);
 include('../views/admin/articles_view.php');
 

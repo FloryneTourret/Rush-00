@@ -24,7 +24,7 @@
   <?php if(isset($_SESSION['email'])){ ?>
   <a href="logout.php" class="float-right">Déconnexion</a>
   <?php if($_SESSION['role'] == 'admin'){ ?>
-    <a href="admin/index.php" class="float-right">Panel admin</a>
+  <a href="admin/commandes.php" class="float-right">Panel admin</a>
   <?php }?>
   <a href="profil.php" class="float-right"><?php echo $_SESSION['firstname'].' '.$_SESSION['lastname'];?></a>
   <?php }else{?>

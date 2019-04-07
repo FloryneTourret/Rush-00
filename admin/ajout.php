@@ -9,6 +9,7 @@ include('../models/admin/ajout_model.php');
 include('../models/admin/categories_model.php');
 
 include('../views/base/header_admin.php');
+include('../views/base/sidebar.php');
 $categories = get_categories($mysqli);
 include('../views/admin/ajout_view.php');
 
