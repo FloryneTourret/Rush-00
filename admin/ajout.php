@@ -15,8 +15,27 @@ include('../views/admin/ajout_view.php');
 
 if(isset($_POST['titre']) && isset($_POST['description']) && isset($_POST['prix']))
 {
+    
+    $caracteres = array('À' => 'a', 'Á' => 'a', 'Â' => 'a', 'Ä' => 'a', 'à' => 'a', 'á' => 'a', 'â' => 'a', 'ä' => 'a', '@' => 'a',
+    'È' => 'e', 'É' => 'e', 'Ê' => 'e', 'Ë' => 'e', 'è' => 'e', 'é' => 'e', 'ê' => 'e', 'ë' => 'e', '€' => 'e',
+    'Ì' => 'i', 'Í' => 'i', 'Î' => 'i', 'Ï' => 'i', 'ì' => 'i', 'í' => 'i', 'î' => 'i', 'ï' => 'i',
+    'Ò' => 'o', 'Ó' => 'o', 'Ô' => 'o', 'Ö' => 'o', 'ò' => 'o', 'ó' => 'o', 'ô' => 'o', 'ö' => 'o',
+    'Ù' => 'u', 'Ú' => 'u', 'Û' => 'u', 'Ü' => 'u', 'ù' => 'u', 'ú' => 'u', 'û' => 'u', 'ü' => 'u', 'µ' => 'u',
+    'Œ' => 'oe', 'œ' => 'oe',
+    '$' => 's');
+
     $titre = ucfirst(htmlspecialchars(addslashes($_POST['titre'])));
+    
+    $titre = strtr($titre, $caracteres);
+	$titre = preg_replace('#[^A-Za-z0-9]+#', ' ', $titre);
+    $titre = trim($titre);
+
     $description = htmlspecialchars(addslashes($_POST['description']));
+
+    $description = strtr($description, $caracteres);
+	$description = preg_replace('#[^A-Za-z0-9]+#', ' ', $description);
+    $description = trim($description);
+
     $prix = strtolower(htmlspecialchars(addslashes($_POST['prix'])));
     if (is_numeric($prix))
     {
