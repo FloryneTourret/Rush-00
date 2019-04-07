@@ -17,7 +17,7 @@
         
         ?>
     </div>
-    <div class="articles-list offset-2">
+    <div class="articles-list offset-1">
         <?php
         if (!empty($articles))
         {

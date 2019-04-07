@@ -36,9 +36,31 @@ if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['emai
 	    $decode = json_decode(file_get_contents($api_url), true);
 
         if ($decode['success'] == true) {
+
+            $caracteres = array('À' => 'a', 'Á' => 'a', 'Â' => 'a', 'Ä' => 'a', 'à' => 'a', 'á' => 'a', 'â' => 'a', 'ä' => 'a', '@' => 'a',
+            'È' => 'e', 'É' => 'e', 'Ê' => 'e', 'Ë' => 'e', 'è' => 'e', 'é' => 'e', 'ê' => 'e', 'ë' => 'e', '€' => 'e',
+            'Ì' => 'i', 'Í' => 'i', 'Î' => 'i', 'Ï' => 'i', 'ì' => 'i', 'í' => 'i', 'î' => 'i', 'ï' => 'i',
+            'Ò' => 'o', 'Ó' => 'o', 'Ô' => 'o', 'Ö' => 'o', 'ò' => 'o', 'ó' => 'o', 'ô' => 'o', 'ö' => 'o',
+            'Ù' => 'u', 'Ú' => 'u', 'Û' => 'u', 'Ü' => 'u', 'ù' => 'u', 'ú' => 'u', 'û' => 'u', 'ü' => 'u', 'µ' => 'u',
+            'Œ' => 'oe', 'œ' => 'oe',
+            '$' => 's');
+
             $firstname = ucfirst(htmlspecialchars(addslashes($_POST['firstname'])));
+
+            
+            $firstname = strtr($firstname, $caracteres);
+            $firstname = preg_replace('#[^A-Za-z0-9]+#', ' ', $firstname);
+            $firstname = trim($firstname);
+
             $lastname = strtoupper(htmlspecialchars(addslashes($_POST['lastname'])));
+
+            $lastname = strtr($lastname, $caracteres);
+            $lastname = preg_replace('#[^A-Za-z0-9]+#', ' ', $lastname);
+            $lastname = trim($lastname);
+            $lastname = strtoupper($lastname);
+
             $email = strtolower(htmlspecialchars(addslashes($_POST['email'])));
+
             $password_hash = password_hash(htmlspecialchars(addslashes($_POST['password'])), PASSWORD_DEFAULT);
             if (email_exist($mysqli, $email) == FALSE)
             {
